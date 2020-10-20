@@ -51,8 +51,6 @@ importlib-metadata==2.0.0
 incremental==17.5.0
 iniconfig==1.1.1
 ipykernel==5.3.4
-ipython==7.18.1
-ipython-genutils==0.2.0
 itemadapter==0.1.1
 itemloaders==1.0.3
 itsdangerous==1.1.0
