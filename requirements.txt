@@ -121,7 +121,6 @@ segtok==1.5.10
 selenium==3.141.0
 sentencepiece==0.1.91
 service-identity==18.1.0
-setuptools==50.3.0.post20201006
 sgmllib3k==1.0.0
 six==1.15.0
 smart-open==3.0.0
