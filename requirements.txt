@@ -35,7 +35,6 @@ fake-useragent==0.1.11
 feedfinder2==0.0.4
 feedparser==6.0.1
 filelock==3.0.12
-flair==0.6.1
 Flask==1.1.2
 Flask-Compress==1.7.0
 ftfy==5.8
@@ -132,8 +131,6 @@ tinysegmenter==0.3
 tldextract==2.2.3
 tokenizers==0.8.1rc2
 toml==0.10.1
-torch==1.6.0
-torchvision==0.7.0
 tornado==6.0.4
 tqdm==4.50.2
 transformers==3.3.1
