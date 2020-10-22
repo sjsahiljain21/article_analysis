@@ -22,28 +22,28 @@ from dash.dependencies import Input, Output, State
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 sid = SentimentIntensityAnalyzer()
 
-def nltk_polarity_score(sentence):
-    if len(sentence) < 5:
-        return 0
-    else:
-        compound = sid.polarity_scores(sentence)['compound']
-        return compound
+# def nltk_polarity_score(sentence):
+#     if len(sentence) < 5:
+#         return 0
+#     else:
+#         compound = sid.polarity_scores(sentence)['compound']
+#         return compound
 
 
 
-def get_scores_nltk(sentences):
-    """ Call predict on every sentence of a text """
-    results = []
+# def get_scores_nltk(sentences):
+#     """ Call predict on every sentence of a text """
+#     results = []
     
-    for i in range(0, len(sentences)): 
-        results.append(nltk_polarity_score(sentences[i]))
-    return results
+#     for i in range(0, len(sentences)): 
+#         results.append(nltk_polarity_score(sentences[i]))
+#     return results
 
 
 
-def get_mean(scores):
-    result = sum(scores)/len(scores)
-    return result
+# def get_mean(scores):
+#     result = sum(scores)/len(scores)
+#     return result
 
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
@@ -86,7 +86,7 @@ def update_sentiment(n_clicks, input_value):
     publish_date = news.date_publish
     headline = news.headline
     body = news.article
-    sentiment = round(get_mean(get_scores_nltk(sent_tokenize(body))), 2)
+    sentiment = round(sid.polarity_scores(body)['compound'], 2)
     summary = news.summary
     keywords = ', '.join(news.keywords)
     authors = ', '.join(news.authors)
