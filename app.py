@@ -4,7 +4,7 @@
 
 from newsfetch.news import newspaper
 import nltk
-nltk.download('punkt')
+# nltk.download('punkt')
 from nltk.tokenize import sent_tokenize
 
 import dash
@@ -19,7 +19,7 @@ from dash.dependencies import Input, Output, State
 # flair_sentiment = flair.models.TextClassifier.load('en-sentiment') 
 
 import nltk
-nltk.download('vader_lexicon')
+# nltk.download('vader_lexicon')
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 sid = SentimentIntensityAnalyzer()
 
